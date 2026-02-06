@@ -1,10 +1,152 @@
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave Spencer - Business Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .business-card {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            border: 2px solid #ff8c00;
+            border-radius: 20px;
+            padding: 60px 80px;
+            max-width: 600px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .name {
+            font-size: 3em;
+            font-weight: 700;
+            color: #ff8c00;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .job-title {
+            font-size: 1.5em;
+            color: #ff8c00;
+            margin-bottom: 30px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .company {
+            font-size: 1.8em;
+            color: #ff8c00;
+            margin-bottom: 40px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .divider {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #ff8c00, transparent);
+            margin: 30px 0;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+        }
+
+        .address, .email {
+            font-size: 1.1em;
+            color: #ff8c00;
+            margin: 10px 0;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .email a {
+            color: #ff8c00;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease;
+        }
+
+        .email a:hover {
+            border-bottom: 2px solid #ff8c00;
+        }
+
+        @media (max-width: 768px) {
+            .business-card {
+                padding: 40px 30px;
+                margin: 20px;
+            }
+
+            .name {
+                font-size: 2.2em;
+            }
+
+            .job-title {
+                font-size: 1.2em;
+            }
+
+            .company {
+                font-size: 1.4em;
+            }
+
+            .address, .email {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
 <body>
-
-<h1>Spenners Heading</h1>
-<p>Spenners Text Goes Here.</p>
-<p>Added second line of text.</p>
-
+    <div class="business-card">
+        <div class="name">Dave Spencer</div>
+        <div class="job-title">Software Engineer</div>
+        
+        <div class="divider"></div>
+        
+        <div class="company">Labcenter Electronics</div>
+        
+        <div class="contact-info">
+            <div class="address">
+                The Stables,<br>
+                Hartlington Hall
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="email">
+                <a href="mailto:david@labcenter.com">david@labcenter.com</a>
+            </div>
+        </div>
+    </div>
 </body>
-</html> 
+</html>
